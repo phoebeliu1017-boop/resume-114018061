@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人履歷 - AU114018061</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Microsoft JhengHei", sans-serif;
+        background: linear-gradient(135deg, #4e73df, #1cc88a);
+        color: #333;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        overflow: hidden;
+    }
+
+    header {
+        background: #4e73df;
+        color: white;
+        padding: 30px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+    }
+
+    header p {
+        margin: 5px 0;
+        opacity: 0.9;
+    }
+
+    section {
+        padding: 25px 40px;
+        border-bottom: 1px solid #eee;
+    }
+
+    section:last-child {
+        border-bottom: none;
+    }
+
+    h2 {
+        color: #4e73df;
+        margin-bottom: 15px;
+    }
+
+    .skill-bar {
+        margin-bottom: 15px;
+    }
+
+    .skill-name {
+        font-weight: bold;
+    }
+
+    .bar {
+        height: 10px;
+        background: #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .bar-fill {
+        height: 100%;
+        background: #1cc88a;
+        width: 0;
+        transition: width 1.5s ease;
+    }
+
+    button {
+        background: #4e73df;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: #2e59d9;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: #f8f9fc;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>你的姓名</h1>
+    <p>亞洲大學 學生</p>
+    <p>學號：AU114018061</p>
+    <p>Email：yourmail@example.com</p>
+</header>
+
+<section>
+    <h2>📌 個人簡介</h2>
+    <p>
+        我是亞洲大學的學生，對網頁設計與程式開發充滿熱情，
+        具備良好的學習能力與團隊合作精神，希望未來能成為優秀的工程師。
+    </p>
+</section>
+
+<section>
+    <h2>🎓 學歷</h2>
+    <p>
+        亞洲大學（University Student）<br>
+        科系：請填寫你的科系<br>
+        在學期間：2024 - 現在
+    </p>
+</section>
+
+<section>
+    <h2>💻 技能</h2>
+
+    <div class="skill-bar">
+        <div class="skill-name">HTML</div>
+        <div class="bar"><div class="bar-fill" data-width="90%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name">CSS</div>
+        <div class="bar"><div class="bar-fill" data-width="85%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name">JavaScript</div>
+        <div class="bar"><div class="bar-fill" data-width="75%"></div></div>
+    </div>
+
+    <button onclick="animateSkills()">顯示技能熟練度</button>
+</section>
+
+<section>
+    <h2>📁 專案經驗</h2>
+    <ul>
+        <li>個人網站設計專案</li>
+        <li>校內課程網頁製作</li>
+        <li>JavaScript 小遊戲開發</li>
+    </ul>
+</section>
+
+<footer>
+    © 2026 AU114018061 個人履歷
+</footer>
+
+</div>
+
+<script>
+function animateSkills() {
+    const bars = document.querySelectorAll('.bar-fill');
+    bars.forEach(bar => {
+        bar.style.width = bar.getAttribute('data-width');
+    });
+}
+</script>
+
+</body>
+</html>
